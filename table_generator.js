@@ -67,7 +67,7 @@ function generateTable()
         }
         cell.id = "cell-rank";
         cell = row.insertCell(index++);
-        cell.innerHTML = '<img src="' + players[i].steamID + '.jpg"></img>';
+        cell.innerHTML = '<img src="images/' + players[i].steamID + '.jpg"></img>';
         cell.id = 'cell-img';
         cell = row.insertCell(index++);
         cell.innerHTML = players[i].name;
