@@ -1,0 +1,91 @@
+<html>
+    <style>
+    * {
+        color: white;
+    }
+    h1, th {
+        font-family: Cinzel;
+    }
+    table {
+        text-align: left;
+        width: 78%;
+        border-spacing: 0 10;
+    }
+    body {
+        background-image: url("background.png");
+    }
+    h1 {
+        padding-top: 85px;
+        margin-bottom: 0px;
+        font-size: 80pt;
+        font-weight: normal;
+        text-align: center;
+    }
+    div {
+        padding-top: 0px;
+        padding-left: 18%;
+    }
+    img {
+        vertical-align: center;
+        height: 90%;
+    }
+    tr {
+        height: 60px;
+    }
+    td {
+        font-family: Open Sans;
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 50px;
+    }
+    #cell-name {
+        text-indent: -50px;
+    }
+    #cell-rank {
+        padding-left: 16px;
+        width: 120px;
+    }
+    #cell-img {
+        width: 55px;
+        align-content: right;
+    }
+    #cell-wins {
+        width: 75px;
+    }
+    #cell-losses {
+        width: 75px;
+    }
+    #cell-games {
+        width: 75px;
+    }
+    </style>
+    <body>
+        <h1>
+            BVGS INHOUSE
+        </h1>
+        <div>
+            <table id='Leaderboard'>
+                <tr>
+                    <th>
+                        Rank
+                    </th>
+                    <th>
+                        Player
+                    </th>
+                    <th>
+                        <!-- images go here -->
+                    </th>
+                    <th>
+                        Wins
+                    </th>
+                    <th>
+                        Losses
+                    </th>
+                    <th>
+                        Games
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <script src='table_generator.js'></script>
+    </body>
+</html>
