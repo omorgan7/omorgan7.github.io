@@ -10,7 +10,7 @@ app.get('/*.png', function(req, res, next) {
 });
 
 app.get('/*.jpg', function(req, res, next) { 
-    res.sendFile(req.url, {root: './images'}); 
+    res.sendFile(req.url, {root: './'}); 
 });
 
 app.get('/*.js', function(req, res, next) { 
