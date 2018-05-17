@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req, res, next) { 
-    res.sendFile('main.html', {root: './'}); 
+    res.sendFile('index.html', {root: './'}); 
 });
 
 app.get('/*.png', function(req, res, next) { 
