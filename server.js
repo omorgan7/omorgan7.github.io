@@ -21,4 +21,9 @@ app.get('/*.json', function(req, res, next) {
     res.sendFile(req.url, {root: './'}); 
 });
 
+app.get('/*.css', function(req, res, next) { 
+    res.sendFile(req.url, {root: './'}); 
+});
+
+
 app.listen(8080);

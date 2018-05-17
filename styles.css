@@ -1,0 +1,60 @@
+* {
+    color: white;
+}
+h1, th {
+    font-family: 'Cinzel', serif;
+}
+table {
+    text-align: left;
+    width: 64vw;
+    border-spacing: 0 10;
+}
+body {
+    background-image: url("background.png");
+    background-color: rgb(35, 35, 35);
+    background-repeat: repeat;
+}
+h1 {
+    padding-top: 85px;
+    margin-bottom: 0px;
+    font-size: 8.8vw;
+    font-weight: normal;
+    text-align: center;
+}
+div {
+    padding-top: 0px;
+    padding-left: 18%;
+}
+img {
+    vertical-align: center;
+    height: 90%;
+}
+tr {
+    height: 60px;
+}
+td {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 50px;
+}
+#cell-rank {
+    padding-left: 16px;
+    width: 15%;
+}
+#Player-Cell-Header {
+    width: 55px;
+}
+#cell-img {
+    margin-left: 0px;
+    padding-left: 0px;
+    align-content: right;
+}
+#cell-wins {
+    width: 11%;
+}
+#cell-losses {
+    width: 11%;
+}
+#cell-games {
+    width: 11%;
+}
