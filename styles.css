@@ -23,7 +23,7 @@ h1 {
 }
 div {
     padding-top: 0px;
-    padding-left: 18%;
+    padding-left: 18vw;
 }
 img {
     vertical-align: center;
@@ -34,6 +34,7 @@ tr {
 }
 td {
     font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
     background-color: rgba(0, 0, 0, 0.4);
     height: 50px;
 }
