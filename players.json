@@ -8,7 +8,7 @@
     {
         "name": "Psi",
         "wins": 3,
-        "losses": 1,
+        "losses": 2,
         "steamID": 62067384
     },
     {
@@ -25,7 +25,7 @@
     },
     {
         "name": "HuggyBear",
-        "wins": 2,
+        "wins": 3,
         "losses": 1,
         "steamID": 82737506
     },
@@ -37,7 +37,7 @@
     },
     {
         "name": "Timbonaut",
-        "wins": 2,
+        "wins": 3,
         "losses": 1,
         "steamID": 79141888
     },
@@ -49,26 +49,38 @@
     },
     {
         "name": "𝓯𝓪𝓷𝓬𝔂 𝓸𝓵𝓵𝓲𝓮",
-        "wins": 1,
+        "wins": 2,
         "losses": 3,
         "steamID": 58153042
     },
     {
         "name": "Drekkon",
         "wins": 1,
-        "losses": 3,
+        "losses": 4,
         "steamID": 32383058
     },
     {
         "name": "WhatAreFrogs",
         "wins": 0,
-        "losses": 1,
+        "losses": 2,
         "steamID": 64013126
     },
     {
         "name": "A Flatulent Veteran",
-        "wins": 0,
+        "wins": 1,
         "losses": 4,
         "steamID": 74378506
+    },
+    {
+        "name": "Unicornisaurus",
+        "wins" : 0,
+        "losses": 1,
+        "steamID": 86978981
+    },
+    {
+        "name": "SupahNoodlz",
+        "wins" : 0,
+        "losses": 1,
+        "steamID": 312230098
     }
 ]
