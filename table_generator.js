@@ -81,6 +81,11 @@ function generateTable()
         cell = row.insertCell(index++);
         cell.innerHTML = players[i].games;
         cell.id = 'cell-games';
+        cell = row.insertCell(index++);
+        var button = document.createElement('BUTTON');
+        button.innerHTML = "+";
+        cell.appendChild(button);
+
     }
 }
 
