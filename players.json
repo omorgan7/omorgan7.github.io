@@ -2,13 +2,13 @@
     {
         "name": "Oli the Optimist",
         "wins": 1,
-        "losses": 3,
+        "losses": 4,
         "steamID": 40204701
     },
     {
         "name": "Psi",
         "wins": 3,
-        "losses": 2,
+        "losses": 3,
         "steamID": 62067384
     },
     {
@@ -20,13 +20,13 @@
     {
         "name": "Jca",
         "wins": 4,
-        "losses": 0,
+        "losses": 1,
         "steamID": 112844294
     },
     {
         "name": "HuggyBear",
         "wins": 3,
-        "losses": 1,
+        "losses": 2,
         "steamID": 82737506
     },
     {
@@ -37,7 +37,7 @@
     },
     {
         "name": "Timbonaut",
-        "wins": 3,
+        "wins": 4,
         "losses": 1,
         "steamID": 79141888
     },
@@ -49,13 +49,13 @@
     },
     {
         "name": "𝓯𝓪𝓷𝓬𝔂 𝓸𝓵𝓵𝓲𝓮",
-        "wins": 2,
+        "wins": 3,
         "losses": 3,
         "steamID": 58153042
     },
     {
         "name": "Drekkon",
-        "wins": 1,
+        "wins": 2,
         "losses": 4,
         "steamID": 32383058
     },
@@ -68,7 +68,7 @@
     {
         "name": "A Flatulent Veteran",
         "wins": 1,
-        "losses": 4,
+        "losses": 5,
         "steamID": 74378506
     },
     {
@@ -82,5 +82,17 @@
         "wins" : 0,
         "losses": 1,
         "steamID": 312230098
+    },
+    {
+        "name": "Lord Scrubby McScrubbington",
+        "wins": 1,
+        "losses": 0,
+        "steamID": 108458900
+    },
+    {
+        "name": "Lukey",
+        "wins": 1,
+        "losses": 0,
+        "steamID": 114321031
     }
 ]
