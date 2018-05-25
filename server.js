@@ -5,6 +5,10 @@ app.get('/', function(req, res, next) {
     res.sendFile('index.html', {root: './'}); 
 });
 
+app.get('/*.html', function(req, res, next) {
+    res.sendFile(req.url, {root: './'}); 
+});
+
 app.get('/*.png', function(req, res, next) { 
     res.sendFile(req.url, {root: './'}); 
 });

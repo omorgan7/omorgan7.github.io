@@ -40,6 +40,11 @@ function getPlayers()
     });
 }
 
+function buttonClick(obj)
+{
+    console.log(obj.innerHTML);
+}
+
 function generateTable()
 {
     var table = document.getElementById('Leaderboard');
@@ -82,9 +87,14 @@ function generateTable()
         cell.innerHTML = players[i].games;
         cell.id = 'cell-games';
         cell = row.insertCell(index++);
-        var button = document.createElement('BUTTON');
-        button.innerHTML = "+";
-        cell.appendChild(button);
+        var plusButton = document.createElement('BUTTON');
+        plusButton.innerHTML = "+";
+        plusButton.onclick = function() { buttonClick(plusButton) };
+        cell.appendChild(plusButton);
+        var minusButton = document.createElement('BUTTON');
+        minusButton.innerHTML = "-";
+        minusButton.onclick = function() { buttonClick(minusButton) };
+        cell.appendChild(minusButton);
 
     }
 }

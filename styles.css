@@ -4,6 +4,14 @@
 h1, th {
     font-family: 'Cinzel', serif;
 }
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.2em;
+    text-align: right;
+}
+button {
+    color: black;
+}
 table {
     text-align: left;
     width: 64vw;
