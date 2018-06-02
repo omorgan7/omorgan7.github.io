@@ -1,11 +1,28 @@
 var players;
 
+function TableLoaded(initValue, onChange)
+{
+    this.value = initValue;
+    this.onChange = onChange;
+
+    this.get = function() {
+        return this.value;
+    }
+
+    this.set = function(newValue) {
+        this.value = newValue;
+        this.onChange();
+    }
+}
+
+var tableLoaded = new TableLoaded(false, appendCallback);
+
 function loadPlayerJSONCallback(callback)
 {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', 'players.json', true);
-    xobj.onreadystatechange = function(){
+    xobj.onreadystatechange = function() {
         if (xobj.readyState == 4 && xobj.status == "200") {
             callback(xobj.responseText);
         }
@@ -40,22 +57,21 @@ function getPlayers()
     });
 }
 
-function buttonClick(obj)
+function updateTable()
 {
-    console.log(obj.innerHTML);
-}
-
-function generateTable()
-{
-    var table = document.getElementById('Leaderboard');
+   var table = document.getElementById('Leaderboard');
 
     var lastRank = 1;
     var runningTieTotal = 0;
     for (var i = 0; i < players.length; ++i) {
-        var row = table.insertRow(i + 1);
+        var row = table.rows[i + 1];
         var index = 0;
         var cell;
-        cell = row.insertCell(index++);
+
+        players.leaderboardEntry = i;
+
+        cell = row.cells[index++];
+
         if (i == 0) {
             cell.innerHTML = "#" + lastRank;
         }
@@ -70,33 +86,55 @@ function generateTable()
                 cell.innerHTML = "#" + lastRank;
             }
         }
-        cell.id = "cell-rank";
-        cell = row.insertCell(index++);
-        cell.innerHTML = '<img src="images/' + players[i].steamID + '.jpg"></img>';
-        cell.id = 'cell-img';
-        cell = row.insertCell(index++);
-        cell.innerHTML = players[i].name;
-        cell.id = 'cell-name';
-        cell = row.insertCell(index++);
-        cell.innerHTML = players[i].wins;
-        cell.id = 'cell-wins';
-        cell = row.insertCell(index++);
-        cell.innerHTML = players[i].losses;
-        cell.id = 'cell-losses';
-        cell = row.insertCell(index++);
-        cell.innerHTML = players[i].games;
-        cell.id = 'cell-games';
-        cell = row.insertCell(index++);
-        var plusButton = document.createElement('BUTTON');
-        plusButton.innerHTML = "+";
-        plusButton.onclick = function() { buttonClick(plusButton) };
-        cell.appendChild(plusButton);
-        var minusButton = document.createElement('BUTTON');
-        minusButton.innerHTML = "-";
-        minusButton.onclick = function() { buttonClick(minusButton) };
-        cell.appendChild(minusButton);
 
+        cell = row.cells[index++];
+        cell.innerHTML = '<img src="images/' + players[i].steamID + '.jpg"></img>';
+
+        cell = row.cells[index++];
+        cell.innerHTML = players[i].name;
+
+        cell = row.cells[index++];
+        cell.innerHTML = players[i].wins;
+
+        cell = row.cells[index++];
+        cell.innerHTML = players[i].losses;
+
+        cell = row.cells[index++];
+        cell.innerHTML = players[i].games;
     }
+}
+
+function generateTable()
+{
+    var table = document.getElementById('Leaderboard');
+
+    for (var i = 0; i < players.length; ++i) {
+        var row = table.insertRow(i + 1);
+        var index = 0;
+        var cell;
+        cell = row.insertCell(index++);
+        cell.id = "cell-rank";
+
+        cell = row.insertCell(index++);
+        cell.id = 'cell-img';
+
+        cell = row.insertCell(index++);
+        cell.id = 'cell-name';
+
+        cell = row.insertCell(index++);
+        cell.id = 'cell-wins';
+
+        cell = row.insertCell(index++);
+        cell.id = 'cell-losses';
+
+        cell = row.insertCell(index++);
+        cell.id = 'cell-games';
+
+        cell = row.insertCell(index++);
+        // this cell is where buttons go in admin mode.
+    }
+    tableLoaded.set(true);
+    updateTable();
 }
 
 getPlayers();
