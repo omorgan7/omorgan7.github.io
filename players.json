@@ -1,13 +1,13 @@
 [
     {
         "name": "Oli the Optimist",
-        "wins": 4,
+        "wins": 5,
         "losses": 8,
         "steamID": 40204701
     },
     {
         "name": "Psi",
-        "wins": 7,
+        "wins": 8,
         "losses": 5,
         "steamID": 62067384
     },
@@ -19,14 +19,14 @@
     },
     {
         "name": "Jca",
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "steamID": 112844294
     },
     {
         "name": "HuggyBear",
         "wins": 4,
-        "losses": 6,
+        "losses": 7,
         "steamID": 82737506
     },
     {
@@ -55,7 +55,7 @@
     },
     {
         "name": "Drekkon",
-        "wins": 3,
+        "wins": 4,
         "losses": 8,
         "steamID": 32383058
     },
@@ -68,7 +68,7 @@
     {
         "name": "A Flatulent Veteran",
         "wins": 4,
-        "losses": 9,
+        "losses": 10,
         "steamID": 74378506
     },
     {
@@ -79,7 +79,7 @@
     },
     {
         "name": "SupahNoodlz",
-        "wins" : 0,
+        "wins" : 1,
         "losses": 3,
         "steamID": 312230098
     },
@@ -98,7 +98,7 @@
     {
         "name": "Bae",
         "wins": 5,
-        "losses": 1,
+        "losses": 2,
         "steamID": 80588927
     },
     {
@@ -106,5 +106,17 @@
         "wins": 0,
         "losses": 1,
         "steamID": 87777536
+    },
+    {
+        "name": "AquaDuck",
+        "wins": 0,
+        "losses": 1,
+        "steamID": 91088098
+    },
+    {
+        "name": "ThomWHE",
+        "wins": 0,
+        "losses": 1,
+        "steamID": 64610313
     }
 ]
