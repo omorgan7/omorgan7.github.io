@@ -32,11 +32,12 @@ function loadPlayerJSONCallback(callback)
 
 function computeScore()
 {
+    let maxGames = getMaximumNumberOfGames();
+
     for (var i = 0; i < players.length; ++i) {
         var player = players[i];
         player.games = player.wins + player.losses;
-        var quotient = player.wins / player.games;
-        player.ranking = Math.pow((1.0 + quotient), 2.0) + Math.pow(0.5 + quotient, 0.5 + player.games / (player.games + 1.0));
+        player.ranking = computePlayerRankings(maxGames, player);
     }
 }
 
@@ -51,15 +52,50 @@ function getPlayers()
 {
     loadPlayerJSONCallback(function(response) {
         players = JSON.parse(response);
-        computeScore();
-        sortPlayers();
         generateTable();
     });
+}
+
+function getMaximumNumberOfGames()
+{
+    let maxGames = 0;
+
+    for (let player of players) {
+        let games = player.wins + player.losses;
+        maxGames = Math.max(maxGames, games);
+    }
+    return maxGames;
+}
+
+function computePlayerRankings(maxGames, player)
+{
+
+    // % of the max games played which you can miss
+    // whilst not having a decreasing scalar applied.
+    let scoreScalingBoundary = 0.5;
+
+    // The minimum value that the decreasing scalar takes
+    let minimumScoreScale = 0.5;
+
+    let winrate = player.wins / player.games;
+    let ranking = Math.pow((1.0 + winrate), 2.0) + Math.pow(0.5 + winrate, 0.5 + player.games / (player.games + 1.0));
+
+    let thresholdFactor = 
+        Math.floor(player.games / maxGames + scoreScalingBoundary) - (Math.floor(player.games / maxGames - (1 - scoreScalingBoundary))) * 
+        (((player.games / maxGames) * (1 - minimumScoreScale) / (1 - scoreScalingBoundary)) + minimumScoreScale);
+
+    ranking *= thresholdFactor;
+
+    return ranking;
+
 }
 
 function updateTable()
 {
    var table = document.getElementById('Leaderboard');
+
+   computeScore();
+   sortPlayers();
 
     var lastRank = 1;
     var runningTieTotal = 0;
