@@ -4,6 +4,9 @@
 h1, th {
     font-family: 'Cinzel', serif;
 }
+label {
+    font-family: 'Open Sans', sans-serif;
+}
 h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.2em;
@@ -14,6 +17,7 @@ button {
 }
 table {
     text-align: left;
+    margin-left: 18vw;
     width: 64vw;
     border-spacing: 0 10;
 }
@@ -21,10 +25,7 @@ body {
     background-image: url("background.jpg");
     background-color: rgb(35, 35, 35);
     background-repeat: repeat;
-}
-div.login {
-    margin-left: 25%;
-    margin-right: 25%;
+    text-align: center;
 }
 form {
     display: inline-block;
@@ -48,7 +49,7 @@ h1 {
 }
 div {
     padding-top: 0px;
-    padding-left: 18vw;
+    /* padding-left: 18vw; */
 }
 img {
     vertical-align: center;
@@ -96,5 +97,4 @@ td {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     height: 50px;
-    margin-left: 50%;
 }

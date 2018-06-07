@@ -2,9 +2,19 @@
 var winCounter = 0;
 var lossCounter = 0;
 
+// change the login text to logout
 var loginText = document.getElementById("login");
 loginText.innerHTML = "Logout";
 loginText.href = "/logout";
+
+// add an additional element that lets someone create access the /create page
+let navbar = document.getElementById("navbar");
+var createPage = document.createElement("SPAN");
+var link = document.createElement("A");
+link.innerHTML = "Add new player";
+link.href = "/create";
+createPage.appendChild(link);
+navbar.insertBefore(createPage, navbar.childNodes[1]);
 
 class LeaderboardEntry {
     constructor(row, index)

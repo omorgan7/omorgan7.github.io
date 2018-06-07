@@ -1,8 +1,8 @@
 var express = require('express');
-var myParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var crypto = require('bcryptjs');
 var fs = require('fs');
+var formidable = require('formidable');
 var app = express();
 
 const saltRounds = 10;
@@ -25,7 +25,6 @@ if (secrets == null) {
 loginHash = secrets.loginHash;
 cookieSecret = secrets.cookieSecret;
 
-app.use(myParser.urlencoded({extended: true}));
 app.use(cookieParser(cookieSecret));
 app.use(express.json());
 
@@ -71,21 +70,25 @@ app.post('/login', function(req, res) {
     else {
         numLoginAttempts = 0;
     }
-    crypto.compare(req.body.pw, loginHash).then(function(result) {
-        if (result) {
-            res.cookie('logged-in', 'true', loginCookieOptions);
-            res.cookie('login-fail', '0', {maxAge: 0});
-            console.log("Successful login.");
-            sendHomePage(req, res);
-        }
-        else {
-            // modify the page to say wrong login
-            numLoginAttempts += 1;
-            console.log("Login attempt failed. Login number: " + numLoginAttempts);
-            res.cookie('login-fail', numLoginAttempts.toString(), numAttemptsOptions);
-            res.sendFile('login.html', {root: './'});
-        }
-    }); 
+    var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files){
+        crypto.compare(fields.pw, loginHash).then(function(result) {
+            if (result) {
+                res.cookie('logged-in', 'true', loginCookieOptions);
+                res.cookie('login-fail', '0', {maxAge: 0});
+                console.log("Successful login.");
+                sendHomePage(req, res);
+            }
+            else {
+                // modify the page to say wrong login
+                numLoginAttempts += 1;
+                console.log("Login attempt failed. Login number: " + numLoginAttempts);
+                res.cookie('login-fail', numLoginAttempts.toString(), numAttemptsOptions);
+                res.sendFile('login.html', {root: './'});
+            }
+        }); 
+    });
+    
 });
 
 app.post('/', function(req, res, next) {
@@ -99,7 +102,7 @@ app.post('/', function(req, res, next) {
             console.log("Failed to update players.");
         }
         else {
-            console.log("players.json has been updated.");
+            console.log("players.json has been updated with a new score.");
         }
     });
     res.redirect('/');
@@ -126,6 +129,57 @@ app.get('/table_appender.js', function(req, res, next) {
     }
 });
 
+app.get('/create', function(req, res, next) {
+    if (req.signedCookies['logged-in'] == 'true') {
+        res.sendFile('create.html', {root: './'});
+    }
+    else {
+        res.redirect('/');
+    }
+});
+
+app.post('/create', function(req, res, next) {
+    if (req.signedCookies['logged-in'] == 'true') {
+        var form = new formidable.IncomingForm();
+        form.parse(req, function(err, fields, files) {
+            var newSteamID = parseInt(fields.steamID);
+            if (fields.steamName == undefined) {
+                return;
+            }
+            if (newSteamID == NaN || newSteamID == undefined) {
+                return;
+            }
+            if (files.profilePic != undefined) {
+                if (files.profilePic.type == 'image/jpeg') {
+                    fs.rename(files.profilePic.path, "./images/" + newSteamID + ".jpg");
+                }
+                else {
+                    return;
+                }
+            }
+            else {
+                return;
+            }
+            fs.readFile("players.json", function (err, data) {
+                if (err) {
+                    return;
+                }
+                var players = JSON.parse(data);
+                players.push({name: fields.steamName, wins: 0, losses: 0, steamID: newSteamID});
+                fs.writeFile("players.json", JSON.stringify(players), 'utf8', function (err, bytesWritten, buffer) {
+                    if (err) {
+                        console.log("Failed to update players.");
+                    }
+                    else {
+                        console.log("players.json has been updated with a new player.");
+                    }
+                });
+            }); 
+        });
+    }
+    res.redirect("/");
+});
+
 app.get('/logout', function(req,res, next) {
     res.cookie('logged-in', 'false', loginCookieOptions);
     res.redirect('/');
@@ -137,6 +191,10 @@ app.get('/players.json', function(req, res, next) {
 
 app.get('/*.css', function(req, res, next) { 
     res.sendFile(req.url, {root: './'}); 
+});
+
+app.get('*', function(req, res){
+    res.status(404).send("404");
 });
 
 app.listen(8080);
