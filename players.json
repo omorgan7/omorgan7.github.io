@@ -2,7 +2,7 @@
     {
         "name": "Oli the Optimist",
         "wins": 6,
-        "losses": 10,
+        "losses": 11,
         "steamID": 40204701
     },
     {
@@ -55,7 +55,7 @@
     },
     {
         "name": "Drekkon",
-        "wins": 6,
+        "wins": 7,
         "losses": 9,
         "steamID": 32383058
     },
@@ -67,7 +67,7 @@
     },
     {
         "name": "A Flatulent Veteran",
-        "wins": 5,
+        "wins": 6,
         "losses": 12,
         "steamID": 74378506
     },
@@ -79,14 +79,14 @@
     },
     {
         "name": "SupahNoodlz",
-        "wins" : 2,
+        "wins" : 3,
         "losses": 3,
         "steamID": 312230098
     },
     {
         "name": "Lord Scrubby McScrubbington",
         "wins": 6,
-        "losses": 3,
+        "losses": 4,
         "steamID": 108458900
     },
     {
@@ -115,7 +115,7 @@
     },
     {
         "name": "ThomWHE",
-        "wins": 2,
+        "wins": 3,
         "losses": 2,
         "steamID": 64610313
     },
@@ -127,12 +127,24 @@
     },
     {
         "name": "Joseph Steinberg",
-        "wins": 1,
-        "losses": 0,
+        "wins": 0,
+        "losses": 2,
         "steamID": 64610313
     },
     {
         "name": "What About The Ottowomen??",
+        "wins": 1,
+        "losses": 1,
+        "steamID": 64610313
+    },
+    {
+        "name": "CosmicChopsticks",
+        "wins": 0,
+        "losses": 1,
+        "steamID": 64610313
+    },
+    {
+        "name": "Waffelily",
         "wins": 1,
         "losses": 0,
         "steamID": 64610313
