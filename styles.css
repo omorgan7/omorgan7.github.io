@@ -4,15 +4,41 @@
 h1, th {
     font-family: 'Cinzel', serif;
 }
+label {
+    font-family: 'Open Sans', sans-serif;
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.2em;
+    text-align: right;
+}
+button {
+    color: black;
+}
 table {
     text-align: left;
+    margin-left: 18vw;
     width: 64vw;
     border-spacing: 0 10;
 }
 body {
-    background-image: url("background.png");
+    background-image: url("background.jpg");
     background-color: rgb(35, 35, 35);
     background-repeat: repeat;
+    text-align: center;
+}
+form {
+    display: inline-block;
+    text-align: left;
+}
+input {
+    color: black;
+}
+input[type='password'] {
+    width: 70%;
+}
+input[type='submit'] {
+    width: 25%;
 }
 h1 {
     padding-top: 85px;
@@ -23,7 +49,7 @@ h1 {
 }
 div {
     padding-top: 0px;
-    padding-left: 18vw;
+    /* padding-left: 18vw; */
 }
 img {
     vertical-align: center;
@@ -31,11 +57,11 @@ img {
 }
 tr {
     height: 60px;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 td {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-    background-color: rgba(0, 0, 0, 0.4);
     height: 50px;
 }
 #cell-rank {
@@ -58,4 +84,17 @@ td {
 }
 #cell-games {
     width: 11%;
+}
+#login-fail {
+    color: red;
+    text-align: center;
+    font-size: 1em;
+}
+#table-header {
+    background-color: rgba(0,0,0,0);
+}
+#submit-score {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    height: 50px;
 }

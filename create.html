@@ -1,0 +1,27 @@
+<html>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Cinzel">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <body>
+        <h1>ADD PLAYER</h1>
+        <h2 id='login-fail'></h2>
+        <div class='create'>
+            <form method='POST' enctype="multipart/form-data" action='/create'>
+                    <label for="profilePic">Profile Picture</label>
+                    <input type='file' name='profilePic'>
+                    <br>
+
+                    <label for="steamName">Steam Name</label>
+                    <input type='text' name='steamName'>
+                    <br>
+                    
+                    <label for="steamID">Steam ID</label>
+                    <input type='number' name='steamID'>
+                    <br>
+                    <input type='submit' id='submit-score'>
+            </form>
+        </div>
+    </body>
+</html>

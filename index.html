@@ -5,12 +5,19 @@
         href="https://fonts.googleapis.com/css?family=Cinzel">
         <link rel="stylesheet" type="text/css" href="styles.css">
     <body>
+        <div>
+            <h2 id='navbar'>
+                <span>
+                    <a id='login' href=login>Login</a>
+                </span>
+            </h2>
+        </div>
         <h1>
             BVGS INHOUSE
         </h1>
         <div>
             <table id='Leaderboard'>
-                <tr>
+                <tr id='table-header'>
                     <th>
                         Rank
                     </th>
@@ -29,9 +36,13 @@
                     <th>
                         Games
                     </th>
+                    <th>
+                        <!-- plus sign goes here-->
+                    </th>
                 </tr>
             </table>
         </div>
+        <script src='table_appender.js'></script>
         <script src='table_generator.js'></script>
     </body>
 </html>
