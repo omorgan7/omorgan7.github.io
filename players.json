@@ -2,18 +2,18 @@
     {
         "name": "Oli the Optimist",
         "wins": 6,
-        "losses": 11,
+        "losses": 12,
         "steamID": 40204701
     },
     {
         "name": "Psi",
-        "wins": 8,
+        "wins": 9,
         "losses": 6,
         "steamID": 62067384
     },
     {
         "name": "The Red Squirrel",
-        "wins": 8,
+        "wins": 9,
         "losses": 1,
         "steamID": 79664074
     },
@@ -26,7 +26,7 @@
     {
         "name": "HuggyBear",
         "wins": 5,
-        "losses": 8,
+        "losses": 9,
         "steamID": 82737506
     },
     {
@@ -38,12 +38,12 @@
     {
         "name": "Timbonaut",
         "wins": 5,
-        "losses": 3,
+        "losses": 4,
         "steamID": 79141888
     },
     {
         "name": "EL",
-        "wins": 4,
+        "wins": 5,
         "losses": 4,
         "steamID": 45502905
     },
@@ -55,7 +55,7 @@
     },
     {
         "name": "Drekkon",
-        "wins": 7,
+        "wins": 8,
         "losses": 9,
         "steamID": 32383058
     },
@@ -68,7 +68,7 @@
     {
         "name": "A Flatulent Veteran",
         "wins": 6,
-        "losses": 12,
+        "losses": 13,
         "steamID": 74378506
     },
     {
@@ -145,8 +145,14 @@
     },
     {
         "name": "Waffelily",
-        "wins": 1,
+        "wins": 2,
         "losses": 0,
         "steamID": 80676085
+    },
+    {
+        "name": "Rallying Cry of the Dragonslayer",
+        "wins": 0,
+        "losses": 1,
+        "steamID": 67959353
     }
 ]
