@@ -80,6 +80,10 @@ function computePlayerRankings(maxGames, player)
     let winrate = player.wins / player.games;
     let ranking = Math.pow((1.0 + winrate), 2.0) + Math.pow(0.5 + winrate, 0.5 + player.games / (player.games + 1.0));
 
+    let scalarRange = (Math.pow(2, 2) + Math.pow(1.5, 1.5)) - (1 + Math.pow(0.5, 1.5))
+
+    ranking = (ranking - (1 + Math.pow(0.5, 1.5))) / scalarRange
+
     let thresholdFactor = 
         Math.floor(player.games / maxGames + scoreScalingBoundary) - (Math.floor(player.games / maxGames - (1 - scoreScalingBoundary))) * 
         (((player.games / maxGames) * (1 - minimumScoreScale) / (1 - scoreScalingBoundary)) + minimumScoreScale);
