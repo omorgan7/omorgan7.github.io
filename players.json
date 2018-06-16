@@ -1,20 +1,20 @@
 [
     {
         "name": "Oli the Optimist",
-        "wins": 6,
-        "losses": 13,
+        "wins": 7,
+        "losses": 14,
         "steamID": 40204701
     },
     {
         "name": "Psi",
-        "wins": 10,
+        "wins": 11,
         "losses": 6,
         "steamID": 62067384
     },
     {
         "name": "The Red Squirrel",
-        "wins": 10,
-        "losses": 1,
+        "wins": 11,
+        "losses": 2,
         "steamID": 79664074
     },
     {
@@ -25,13 +25,13 @@
     },
     {
         "name": "HuggyBear",
-        "wins": 6,
-        "losses": 9,
+        "wins": 7,
+        "losses": 10,
         "steamID": 82737506
     },
     {
         "name": "Hungry Carnivorous Zebra",
-        "wins": 3,
+        "wins": 5,
         "losses": 3,
         "steamID": 1652091
     },
@@ -44,7 +44,7 @@
     {
         "name": "EL",
         "wins": 5,
-        "losses": 4,
+        "losses": 6,
         "steamID": 45502905
     },
     {
@@ -55,7 +55,7 @@
     },
     {
         "name": "Drekkon",
-        "wins": 8,
+        "wins": 10,
         "losses": 10,
         "steamID": 32383058
     },
@@ -80,7 +80,7 @@
     {
         "name": "SupahNoodlz",
         "wins" : 3,
-        "losses": 3,
+        "losses": 5,
         "steamID": 312230098
     },
     {
@@ -97,8 +97,8 @@
     },
     {
         "name": "Bae",
-        "wins": 7,
-        "losses": 2,
+        "wins": 8,
+        "losses": 3,
         "steamID": 80588927
     },
     {
@@ -116,7 +116,7 @@
     {
         "name": "ThomWHE",
         "wins": 3,
-        "losses": 2,
+        "losses": 3,
         "steamID": 64610313
     },
     {
@@ -154,5 +154,11 @@
         "wins": 0,
         "losses": 2,
         "steamID": 67959353
+    },
+    {
+        "name": "Flood",
+        "wins": 1,
+        "losses": 1,
+        "steamID": 79531360
     }
 ]
