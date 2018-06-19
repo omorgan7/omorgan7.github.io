@@ -1,14 +1,14 @@
 [
     {
         "name": "Oli the Optimist",
-        "wins": 7,
+        "wins": 8,
         "losses": 14,
         "steamID": 40204701
     },
     {
         "name": "Psi",
         "wins": 11,
-        "losses": 6,
+        "losses": 7,
         "steamID": 62067384
     },
     {
@@ -43,20 +43,20 @@
     },
     {
         "name": "EL",
-        "wins": 5,
+        "wins": 6,
         "losses": 6,
         "steamID": 45502905
     },
     {
         "name": "𝓯𝓪𝓷𝓬𝔂 𝓸𝓵𝓵𝓲𝓮",
-        "wins": 4,
+        "wins": 5,
         "losses": 9,
         "steamID": 58153042
     },
     {
         "name": "Drekkon",
         "wins": 10,
-        "losses": 10,
+        "losses": 11,
         "steamID": 32383058
     },
     {
@@ -98,7 +98,7 @@
     {
         "name": "Bae",
         "wins": 8,
-        "losses": 3,
+        "losses": 4,
         "steamID": 80588927
     },
     {
@@ -121,7 +121,7 @@
     },
     {
         "name": "FuzzFeis",
-        "wins": 0,
+        "wins": 1,
         "losses": 2,
         "steamID": 132907464
     },
@@ -140,7 +140,7 @@
     {
         "name": "CosmicChopsticks",
         "wins": 0,
-        "losses": 2,
+        "losses": 3,
         "steamID": 78257820
     },
     {
@@ -151,14 +151,14 @@
     },
     {
         "name": "Rallying Cry of the Dragonslayer",
-        "wins": 0,
+        "wins": 1,
         "losses": 2,
         "steamID": 67959353
     },
     {
         "name": "Flood",
         "wins": 1,
-        "losses": 1,
+        "losses": 2,
         "steamID": 79531360
     }
 ]
