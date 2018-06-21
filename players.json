@@ -1,4 +1,4 @@
-[
+﻿[
     {
         "name": "Oli the Optimist",
         "wins": 8,
@@ -37,7 +37,7 @@
     },
     {
         "name": "Timbonaut",
-        "wins": 5,
+        "wins": 50,
         "losses": 4,
         "steamID": 79141888
     },
