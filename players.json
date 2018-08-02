@@ -1,14 +1,14 @@
 [
     {
         "name": "Oli the Optimist",
-        "wins": 8,
+        "wins": 9,
         "losses": 14,
         "steamID": 40204701
     },
     {
         "name": "Psi",
         "wins": 11,
-        "losses": 7,
+        "losses": 8,
         "steamID": 62067384
     },
     {
@@ -55,7 +55,7 @@
     },
     {
         "name": "Drekkon",
-        "wins": 10,
+        "wins": 11,
         "losses": 11,
         "steamID": 32383058
     },
@@ -68,7 +68,7 @@
     {
         "name": "A Flatulent Veteran",
         "wins": 6,
-        "losses": 13,
+        "losses": 14,
         "steamID": 74378506
     },
     {
@@ -79,7 +79,7 @@
     },
     {
         "name": "SupahNoodlz",
-        "wins" : 3,
+        "wins" : 4,
         "losses": 5,
         "steamID": 312230098
     },
@@ -115,7 +115,7 @@
     },
     {
         "name": "ThomWHE",
-        "wins": 3,
+        "wins": 4,
         "losses": 3,
         "steamID": 64610313
     },
@@ -152,13 +152,25 @@
     {
         "name": "Rallying Cry of the Dragonslayer",
         "wins": 1,
-        "losses": 2,
+        "losses": 3,
         "steamID": 67959353
     },
     {
         "name": "Flood",
-        "wins": 1,
+        "wins": 2,
         "losses": 2,
         "steamID": 79531360
+    },
+    {
+        "name": "Belial",
+        "wins": 0,
+        "losses": 1,
+        "steamID": 377165746
+    },
+    {
+        "name": "Matt666",
+        "wins": 0,
+        "losses": 1,
+        "steamID": 167908219
     }
 ]
